@@ -43,13 +43,13 @@ extension Int {
 print(3.multiply(by: 2))  // 6
 print(4.multiply(by: 5))  // 20
 
-var number: Int = 3
+var num: Int = 3
 
-number.multiplySelf(by: 2)
-print(number)   // 6
+num.multiplySelf(by: 2)
+print(num)   // 6
 
-number.multiplySelf(by: 3)
-print(number)   // 18
+num.multiplySelf(by: 3)
+print(num)   // 18
 
 Int.isIntTypeInstance(number)   // true
 Int.isIntTypeInstance(3)        // true
@@ -205,6 +205,8 @@ extension String {
 print("abc"["def"]) // "abcdef"
 print("abc"[3])     // "abcabcabc"
 
+swap(&<#T##a: T##T#>, &<#T##b: T##T#>)
+
 
 
 // 코드 21-8 익스텐션을 통한 중첩 데이터 타입 추가
@@ -245,3 +247,45 @@ func printIntegerKinds(numbers: [Int]) {
 
 printIntegerKinds(numbers: [3, 19, -27, 0, -6, 0, 7])
 // + + - 0 - 0 +
+
+// Int 타입의 값에 '소수'를 판별하는 연산 프로퍼티를 만들기
+
+
+
+
+extension Int {
+    var isSosoo: Bool {
+        
+        isPrime: Bool = true
+        
+        while (i <= num) {
+            isPrime = true
+        for n in self {
+            if (self % n == 0) {
+                isPrime = false
+                break
+            }
+        }
+    }
+}
+
+
+var no: Int = 5
+
+no.isSosoo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

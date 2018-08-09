@@ -88,6 +88,9 @@ print(someType) // SomeProtocol
 
 // 코드 19-7 type(of:) 함수와 .self의 사용
 print(type(of: coffee) == Coffee.self)     // true
+print(type(of: coffee))
+print(Int.self)
+print(coffee.self)
 print(type(of: coffee) == Americano.self)  // false
 print(type(of: coffee) == Latte.self)      // false
 
@@ -155,7 +158,7 @@ if let actingOne: Coffee = myCoffee as? Coffee {
 let castedCoffee: Coffee = yourCoffee as! Coffee
 
 // 런타임 오류!!! 강제 다운캐스팅 실패!
-let castedAmericano: Americano = coffee as! Americano
+// let castedAmericano: Americano = coffee as! Americano
 
 
 // 코드 19-10 항상 성공하는 다운캐스팅
@@ -241,6 +244,8 @@ checkAnyType(of: (3.0, 5.0))    // an (x, y) point at 3.0, 5.0
 checkAnyType(of: yourCoffee)    // 3 shot(s) green tea latte
 checkAnyType(of: coffee)    // something else : Coffee
 checkAnyType(of: { (name: String) -> String in "Hello, \(name)" })  // Hello, yagom
+
+
 
 
 

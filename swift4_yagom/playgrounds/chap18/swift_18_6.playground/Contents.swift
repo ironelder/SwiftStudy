@@ -41,7 +41,7 @@ class Student: Person {
             self.age = newValue - 1
         }
         
-        // didSet {  }  // 오류 발생!!
+         didSet {  }  // 오류 발생!!
     }
     
     override var fullName: String {
